@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% load static %}
+{% load crispy_forms_tags %}
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- Bootstrap CSS File -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link href="{% static "css/bootstrap.css"%}" rel="stylesheet">
+
+  <!-- Main Css file for App -->
+
+  <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
+  <meta charset="utf-8">
+  <title>Benny Portfolio</title>
+</head>
+
+<body>
+
+  <br>
+  <div class="container">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Benny Hinn</a>
+        <a class="btn btn-primary" href="#one">Contact Me</a>
+
+      </div>
+    </nav>
+    <!-- test -->
+    <section>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="{% static "images/bhh.jpg" %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h1 class="card-title display-4 ">Benny Hinn!</h1>
+              <hr class="light">
+              <h6 class="card-subtitle mb-2 text-muted">Benny Hinn</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Python Developer</h6>
+
+              <h4 class="card-title">Full Stack Web Developer / Data Scientist </h4>
+
+
+              <p class="card-text">Hi, my name is Benny Hinn and i'm a full stack web developer as well as a data scientist(Visualization and Analysis).
+                Being a python developer i have a lot to offer from building responsive websites, web scrapping, data Analysis and Visualisation, automation and problem solving with python.
+                I love Programming, doing Research and Collaborating. You can check my work below.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- skills -->
+    <div class="container">
+      <div class="skill-mf">
+
+        <h4>Skills</h4>
+        <span>HTML</span>
+        <spanclass="pull-right">85%</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span>CSS3</span> <span class="pull-right">65%</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span>PYTHON</span> <span class="pull-right">85%</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span>JAVASCRIPT</span> <span class="pull-right">70%</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+    </div>
+    <br>
+
+    <div class="container">
+      <h4 class="display-4 text-center">Projects</h4>
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <a href="https://imaratechcompany.herokuapp.com"><img src="{% static "images/imara.jpeg" %}" alt="" class="img-fluid card-image"></a>
+            <div class="card-body">
+              <h4 class="card-text">
+                <a href="https://imaratechcompany.herokuapp.com">
+                  <p class="card-text">Imara Tech Company Website</p>
+                </a>
+              </h4>
+            </div>
+          </div>
+          <!-- <div class="card card-body h-100" id="profile-wrapper">
+
+
+        </div> -->
+        </div>
+
+        <div class="col-md-6">
+          <div class="card h-100">
+            <a href="https://chonjopoultryfarm.herokuapp.com"><img src="{% static "images/chonjo.png" %}" alt="" class="img-fluid card-image"></a>
+            <div class="card-body">
+              <h4 class="card-text">
+                <a href="https://chonjopoultryfarm.herokuapp.com">
+                  <p class="card-text">Chonjo Poultry Farm Landing Page</p>
+                </a>
+              </h4>
+            </div>
+          </div>
+          <!-- <div class="card card-body h-100" id="profile-wrapper">
+
+
+        </div> -->
+        </div>
+
+
+      </div>
+    </div>
+    <br><br>
+
+    <div class="jumbotron">
+
+      <h4 id="one" class="display-4 text-center">Let's Build Something Great Together!</h4>
+      <form method="POST">
+        {{form|crispy}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-success" name="" value="Submit">
+      </form>
+
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <div class="container-fluid padding">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Benny Hinn</h5>
+          <hr class="light">
+
+          <p>+254799584705 or +254713906708</p>
+          <p>bennyhinnotieno@gmail.com</p>
+          <p>Nairobi, Kenya</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>My Hours</h5>
+          <hr class="light">
+          <p>Monday-Friday: 8am-6pm</p>
+          <p>Sartuday: 9am-5pm</p>
+          <p>Sunday: Closed</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Services</h5>
+          <hr class="light">
+          <p>Web Dev</p>
+          <p>Data Analysis and Visualisation</p>
+          <p>Python Tutoring</p>
+
+        </div>
+
+        <div class="col-12">
+          <hr class="light-100">
+          <h5>&copy; BennyHinn 2020</h5>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="{% static "js/app.js" %}" charset="utf-8"></script>
+</body>
+
+</html>
